@@ -7,6 +7,57 @@
         mc:Ignorable="d"
         Title="Crypto Transaction Tracker" Height="450" Width="800">
     <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Choose One or More Cryptocurrencies:" Margin="0,0,0,10" FontWeight="Bold"/>
+            <!-- Kaspa -->
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="KaspaCheckBox" Content="Kaspa (KAS)" Tag="Kaspa" Checked="CheckBox_CheckedChanged" Unchecked="CheckBox_CheckedChanged"/>
+                <TextBox x:Name="KaspaWalletAddress" Visibility="Collapsed" Width="450" Margin="10,0,0,0"/>
+            </StackPanel>
 
+            <!-- PugDag -->
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="PugDagCheckBox" Content="PugDag (PUG)" Tag="PugDag" Checked="CheckBox_CheckedChanged" Unchecked="CheckBox_CheckedChanged"/>
+                <TextBox x:Name="PugDagWalletAddress" Visibility="Collapsed" Width="450" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <!-- Nautilus -->
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="NautilusCheckBox" Content="Nautilus (NTL)" Tag="Nautilus" Checked="CheckBox_CheckedChanged" Unchecked="CheckBox_CheckedChanged"/>
+                <TextBox x:Name="NautilusWalletAddress" Visibility="Collapsed" Width="450" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <!-- Nexell-ia -->
+            <!--<StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="NexelliaCheckBox" Content="Nexell-ia (NXL)" Tag="Nexellia" Checked="CheckBox_CheckedChanged" Unchecked="CheckBox_CheckedChanged"/>
+                <TextBox x:Name="NexelliaWalletAddress" Visibility="Collapsed" Width="450" Margin="10,0,0,0"/>
+            </StackPanel>-->
+
+            <!-- Hoosat -->
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="HoosatCheckBox" Content="Hoosat (HNT)" Tag="Hoosat" Checked="CheckBox_CheckedChanged" Unchecked="CheckBox_CheckedChanged"/>
+                <TextBox x:Name="HoosatWalletAddress" Visibility="Collapsed" Width="450" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <!-- Consensus -->
+            <!--<StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="ConsensusCheckBox" Content="Consensus (CSS)" Tag="Consensus" Checked="CheckBox_CheckedChanged" Unchecked="CheckBox_CheckedChanged"/>
+                <TextBox x:Name="ConsensusWalletAddress" Visibility="Collapsed" Width="450" Margin="10,0,0,0"/>
+            </StackPanel>-->
+
+            <!-- Pyrin -->
+            <!--<StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="PyrinCheckBox" Content="Pyrin (PYI)" Tag="Pyrin" Checked="CheckBox_CheckedChanged" Unchecked="CheckBox_CheckedChanged"/>
+                <TextBox x:Name="PyrinWalletAddress" Visibility="Collapsed" Width="450" Margin="10,0,0,0"/>
+            </StackPanel>-->
+
+            <!-- Add more cryptocurrencies as needed -->
+        </StackPanel>
+        <!--<TextBox Name="WalletAddressTextBox" Width="300" Height="30" Margin="250,10,250,0" VerticalAlignment="Top" />-->
+        <!--<Button Content="GO" Width="100" Height="30" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Right" Click="GoButton_Click" />-->
+        <Button Name="CheckTransactionsButton" Content="Check Transactions" Click="CheckTransactionsButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0"/>
+        <TextBox x:Name="ResultTextBox" Width="760" Height="200" Margin="10,150,0,0" TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True" />
+        <Button Name="SaveExcelFileButton" Content="Save Excel File" Click="SaveExcelFileButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,381,0,0"/>
+        <TextBlock x:Name="VersionTextBlock" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
     </Grid>
 </Window>
